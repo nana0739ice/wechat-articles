@@ -1,0 +1,565 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-green: #4CAF50;
+    --light-green: #8BC34A;
+    --pale-green: #E8F5E9;
+    --accent-green: #00C853;
+    --dark-green: #2E7D32;
+    --text-dark: #3C4043;
+    --text-medium: #5F6368;
+    --text-light: #80868B;
+    --background-light: #F1F8E9;
+}
+
+body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+    color: #3C4043;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* 文章容器 */
+.article-container {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* 文章头部 */
+.article-header {
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.article-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 16px;
+    line-height: 1.4;
+}
+
+/* 阅读时间指示器样式 */
+.reading-time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 6px 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.reading-icon {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+.reading-estimate {
+    font-size: 14px;
+    color: #5f6368;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #5f6368;
+}
+
+.author {
+    margin-right: 12px;
+    position: relative;
+}
+
+.author::after {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background-color: #e0e0e0;
+}
+
+/* 文章内容 */
+.article-content {
+    padding: 24px;
+}
+
+.article-intro {
+    font-size: 16px;
+    margin-bottom: 24px;
+    color: #202124;
+    line-height: 1.8;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 32px 0 16px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+
+p {
+    margin: 16px 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* 列表样式 */
+.feature-list {
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.feature-list li {
+    margin-bottom: 12px;
+    position: relative;
+    list-style-type: none;
+    padding-left: 24px;
+    line-height: 1.6;
+}
+
+.feature-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 交互区域样式 */
+.interactive-container {
+    margin: 32px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e8eaed;
+}
+
+.interactive-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #202124;
+}
+
+.svg-container {
+    margin-bottom: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.description-box, .slider-info {
+    font-size: 14px;
+    color: #5f6368;
+    padding: 12px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #e8eaed;
+}
+
+.description-box p, .slider-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 原则容器 */
+.principles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.principle {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.principle:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.principle h4 {
+    font-size: 16px;
+    margin: 0 0 8px;
+    color: #1a73e8;
+    position: relative;
+    padding-left: 20px;
+}
+
+.principle h4::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+.principle p {
+    margin: 0;
+    font-size: 14px;
+    color: #5f6368;
+}
+
+/* 文章结论 */
+.article-conclusion {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    position: relative;
+}
+
+.article-conclusion::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 60px;
+    color: #81c784;
+    line-height: 1;
+    opacity: 0.5;
+}
+
+.article-conclusion p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 16px;
+    color: #2e7d32;
+    line-height: 1.8;
+}
+
+/* 文章页脚 */
+.article-footer {
+    padding: 20px 24px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 6px 12px;
+    background-color: #f1f8e9;
+    color: #4CAF50;
+    border-radius: 16px;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.tag:hover {
+    background-color: #dcedc8;
+    cursor: pointer;
+}
+
+.share-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.share-btn, .like-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f1f3f4;
+    color: #3C4043;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share-btn:hover, .like-btn:hover {
+    background-color: #e8eaed;
+}
+
+.share-btn:before {
+    content: "↗";
+    margin-right: 6px;
+}
+
+.like-btn:before {
+    content: "♥";
+    margin-right: 6px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .article-container {
+        border-radius: 0;
+    }
+    
+    .article-header {
+        padding: 20px 16px 12px;
+    }
+    
+    .article-title {
+        font-size: 20px;
+    }
+    
+    .article-content {
+        padding: 16px;
+    }
+    
+    .principles-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .article-footer {
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .share-btns {
+        margin-top: 16px;
+        align-self: flex-end;
+    }
+}
+
+/* 图片轮播组件样式 */
+.image-carousel-container {
+    margin: 32px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid #e8eaed;
+}
+
+.carousel-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 16px;
+    color: #202124;
+    text-align: center;
+}
+
+.image-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.4s ease;
+    -webkit-overflow-scrolling: touch; /* 为iOS设备添加惯性滚动 */
+    scroll-snap-type: x mandatory; /* 使滚动停留在图片上 */
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    height: 200px;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide:hover img {
+    transform: scale(1.03);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    opacity: 0.9;
+    border-radius: 0 0 4px 4px;
+}
+
+.carousel-indicator {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.indicator-text {
+    font-size: 13px;
+    color: #5f6368;
+    margin-bottom: 8px;
+}
+
+.indicator-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #dadce0;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #4CAF50;
+}
+
+/* 为移动设备优化轮播组件 */
+@media (max-width: 768px) {
+    .carousel-slide {
+        height: 180px;
+    }
+    
+    .image-caption {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+    
+    /* 添加滑动提示的动画 */
+    .image-carousel-container:first-of-type .indicator-text {
+        position: relative;
+        animation: swipeHint 2s ease-in-out infinite;
+    }
+    
+    @keyframes swipeHint {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-10px); }
+        50% { transform: translateX(10px); }
+        75% { transform: translateX(-10px); }
+        100% { transform: translateX(0); }
+    }
+}
+
+/* 分享菜单样式 */
+.share-menu {
+    animation: fadeIn 0.2s ease-out;
+    min-width: 160px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eaeaea;
+}
+
+.share-option {
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.share-option:last-child {
+    border-bottom: none;
+}
+
+.share-icon {
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.qr-overlay {
+    animation: fadeIn 0.3s ease;
+}
+
+.qr-content {
+    animation: zoomIn 0.3s ease;
+    max-width: 320px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 移动设备上的调整 */
+@media screen and (max-width: 768px) {
+    .share-menu {
+        position: fixed !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        top: auto !important;
+        width: 100%;
+        border-radius: 16px 16px 0 0 !important;
+        padding: 20px !important;
+        z-index: 2100 !important;
+    }
+    
+    .share-option {
+        padding: 12px !important;
+        font-size: 16px !important;
+    }
+    
+    .qr-content {
+        width: 90%;
+        max-width: none;
+    }
+} 
